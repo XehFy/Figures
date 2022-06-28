@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Figures.Shapes
 {
-    public class Circle : Shape
+    public class Circle : IShape
     {
         public double  Area;
         public double Radius;
@@ -24,13 +24,13 @@ namespace Figures.Shapes
             }
         }
 
-        public override double GetArea()
+        public double GetArea()
         {
             Area = Math.PI * Math.Pow(Radius, 2);
             return Area;
         }
 
-        public override double GetPerimeter()
+        public double GetPerimeter()
         {
             return 2 * Math.PI * Radius;
         }

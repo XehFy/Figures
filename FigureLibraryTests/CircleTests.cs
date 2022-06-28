@@ -19,7 +19,7 @@ namespace FigureLibraryTests
             double r = 5;
             double expected = Math.PI * r * r;
 
-            Shape circle = new Circle(5);
+            IShape circle = new Circle(5);
             double actual = circle.GetArea();
 
             Assert.AreEqual(expected, actual);
@@ -30,7 +30,7 @@ namespace FigureLibraryTests
             double r = 7;
             double expected = Math.PI * r * 2;
 
-            Shape circle = new Circle(7);
+            IShape circle = new Circle(7);
             double actual = circle.GetPerimeter();
 
             Assert.AreEqual(expected, actual);

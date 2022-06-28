@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Figures.Shapes
 {
-    public abstract class Shape
+    public interface IShape
     {
-        public abstract double GetPerimeter();
-        public abstract double GetArea();
+        public double GetPerimeter();
+        public double GetArea();
     }
 }

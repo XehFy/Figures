@@ -23,7 +23,7 @@ namespace FigureLibraryTests
             double c = 5;
             double expected = 12;
 
-            Shape triangle = new Triangle(a, b, c);
+            IShape triangle = new Triangle(a, b, c);
             double actual = triangle.GetPerimeter();
 
             Assert.AreEqual(expected, actual);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Figures.Shapes
 {
-    public class Triangle : Shape
+    public class Triangle : IShape
     {
         private double Area;
         public double sideA;
@@ -29,12 +29,12 @@ namespace Figures.Shapes
             }
         }
 
-        public override double GetPerimeter()
+        public double GetPerimeter()
         {
             return sideA + sideB + sideC;
         }
 
-        public override double GetArea()
+        public double GetArea()
         {
             double semiPerimeter = GetPerimeter() / 2;
             Area = Math.Sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC));
